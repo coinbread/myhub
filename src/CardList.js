@@ -2,11 +2,21 @@ import React from "react";
 import Card from "./Card";
 
 const CardList = ({friends}) => {
+   
     return (
         <>
-            {friends.map((item, id) => 
-                <Card id = {item.id} name = {item.fullname} email = {item.email}/>
-            )}
+            {
+                friends.map((user, i) => {
+                    return ( 
+                        <Card
+                            id = {user.id}
+                            name = {user.fullname} 
+                            email = {user.email} 
+                            key = {i}
+                        />
+                    )
+                })
+            }
         </>
     )
 } 

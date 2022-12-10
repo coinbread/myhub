@@ -1,21 +1,20 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import Card from './Card';
-import { friends } from './friends';
-ReactDOM.render(
+import App from './App';
+
+
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(
   <React.StrictMode>
-    <>
-    {friends.map((item, id) => 
-        <Card id = {item.id} name = {item.fullname} email = {item.email}/>
-    )}
-      
-    </>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App/>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
