@@ -10,7 +10,7 @@ const CardList = ({friends}) => {
                     return ( 
                         <Card
                             id = {user.id}
-                            name = {user.fullname} 
+                            name = {user.name} 
                             email = {user.email} 
                             key = {i}
                         />
